@@ -17,15 +17,18 @@ class Products extends StatelessWidget {
         ],
       ),
     );
+
+
   }
+
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[Expanded(
+    return Expanded(
       child: ListView.builder(
         itemCount: products.length,
         itemBuilder: _buildProductItem,
       ),
-    )] ,);
+    );
   }
 }
