@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 
 class ProductsControl extends StatelessWidget{
+Function addProduct;
+
+  ProductsControl(this.addProduct);
 
   @override
   Widget build (BuildContext context){
@@ -17,7 +20,7 @@ class ProductsControl extends StatelessWidget{
             ),
             color: Colors.red,
             onPressed: () {
-
+            addProduct();
             },
           ),
 

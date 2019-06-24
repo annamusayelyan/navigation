@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
-  List<String> products;
+ final  List<String> products;
 
-  Products(this.products);
+  Products ([this.products = const[]]){
+    print("[Products Widget] Constructor");
+  }
+
 
   Widget _buildProductItem(BuildContext context,int index){
     return Card(
@@ -18,6 +21,20 @@ class Products extends StatelessWidget {
       ),
     );
 
+
+  }
+  Widget buildProductList(){
+    Widget productCard;
+    if(products.length > 0){
+      productCard = ListView.builder(
+        itemBuilder:_buildProductItem,
+        itemCount:products.length,
+      );
+    }
+    else{
+      return Center(child: Text('No Products found'),);
+    }
+    return productCard;
 
   }
 

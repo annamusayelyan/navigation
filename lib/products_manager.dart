@@ -26,13 +26,21 @@ class _ProductsManagerState extends State<ProductsManager> {
 
   }
 
+  void _addProduct(){
+
+    setState(() {
+      _products.add('Sweets');
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
         children: <Widget>[
-          ProductsControl(),
-          Products(_products)
+          ProductsControl(_addProduct),
+          Products(_products),
 
         ],
       ),
