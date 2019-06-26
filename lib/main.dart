@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icone_1/products_manager.dart';
+import 'package:icone_1/pages/home.dart';
 
 main() {
   runApp(MyApp());
@@ -17,12 +18,8 @@ class _MyAppState extends State<MyApp> {
 
   build(context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('first app'),
-          backgroundColor: Colors.deepPurpleAccent,
-        ),
-        body: ProductsManager('Food Tester')));
+      home:HomePage()
 
-  }
+    );}
+
 }

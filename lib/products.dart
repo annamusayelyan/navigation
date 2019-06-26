@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icone_1/pages/product.dart';
 
 class Products extends StatelessWidget {
  final  List<String> products;
@@ -14,9 +15,24 @@ class Products extends StatelessWidget {
         children: <Widget>[
           Image.asset('assets/food.jpg'),
           Text(
-            products[index],
-            style: TextStyle(color: Colors.orange),
+            products[index]),
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                child: Text('Detalis'),
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProductPage()),
+                  );
+              }
+              )
+            ],
           )
+
+
+
         ],
       ),
     );
