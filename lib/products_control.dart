@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class ProductsControl extends StatelessWidget{
-Function addProduct;
+  final Function addProduct;
 
   ProductsControl(this.addProduct);
 
@@ -20,7 +20,10 @@ Function addProduct;
             ),
             color: Colors.red,
             onPressed: () {
-            addProduct();
+            addProduct({
+              'title': "chocolate",
+              'imageUrl': "assets/food.jpg"
+            });
             },
           ),
 
