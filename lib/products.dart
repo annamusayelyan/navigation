@@ -14,8 +14,18 @@ class Products extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.asset(products[index]['imageUrl']),
-          Text(
-            products[index]['title']),
+        Row(
+            mainAxisAlignment:MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              products[index]['title']),
+            Text(
+                products[index]['price'].toString()
+            ),
+          ],
+          ),
+
+
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -24,7 +34,7 @@ class Products extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProductPage(products[index]['title'],products[index]['imageUrl'])),
+                    MaterialPageRoute(builder: (context) => ProductPage(products[index]['title'],products[index]['imageUrl'],products[index]['price'])),
                   );
               }
               )

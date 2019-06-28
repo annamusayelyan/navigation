@@ -22,7 +22,9 @@ class ProductsControl extends StatelessWidget{
             onPressed: () {
             addProduct({
               'title': "chocolate",
-              'imageUrl': "assets/food.jpg"
+              'price': 100.0,
+              'imageUrl': "assets/food.jpg",
+
             });
             },
           ),
